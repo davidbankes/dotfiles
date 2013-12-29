@@ -5,3 +5,5 @@ alias sshnas='ssh admin@nas.davidthinking.com'
 alias sshneik='ssh neikenberry@pierce.dreamhost.com'
 
 alias dnsflush='dscacheutil -flushcache;sudo killall -HUP mDNSResponder'
+
+complete -o default -o nospace -W "$(grep -i -e '^host ' ~/.ssh/config | awk '{print substr($0, index($0,$2))}' ORS=' ')" ssh scp sftp

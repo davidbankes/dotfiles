@@ -2,7 +2,7 @@
 	name = David Bankes
 	email = davidbankes@gmail.com
 [core]
-	excludesfile = /Users/davidbankes/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	autocrlf = false
 	safecrlf = true
 [difftool "sourcetree"]
@@ -13,3 +13,5 @@
 	trustExitCode = true
 [color]
 	ui = true
+[push]
+	default = simple

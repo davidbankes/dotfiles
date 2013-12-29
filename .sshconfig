@@ -1,0 +1,4 @@
+Host oohdev
+	HostName dev01.spiiider.com
+	User dbankes
+	IdentityFile ~/.ssh/oohology/staging.key
