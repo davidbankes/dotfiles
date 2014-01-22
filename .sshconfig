@@ -1,4 +1,19 @@
 Host oohdev
 	HostName dev01.spiiider.com
 	User dbankes
+	IdentityFile ~/.ssh/oohology/dev.key
+
+Host oohstaging
+	HostName 172.16.9.2
+	User dbankes
 	IdentityFile ~/.ssh/oohology/staging.key
+
+Host oohlive
+	HostName 172.16.9.1
+	User dbankes
+	IdentityFile ~/.ssh/oohology/live.key
+
+Host nas
+	HostName nas.davidthinking.com
+	User admin
+	IdentityFile ~/.ssh/personal/nas.key
