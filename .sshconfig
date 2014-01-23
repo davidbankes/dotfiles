@@ -13,6 +13,10 @@ Host oohlive
 	User dbankes
 	IdentityFile ~/.ssh/oohology/live.key
 
+Host ebonite
+	Hostname 50.62.45.240
+	User oohology
+
 Host nas
 	HostName nas.davidthinking.com
 	User admin
