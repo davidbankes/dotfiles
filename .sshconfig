@@ -21,3 +21,12 @@ Host nas
 	HostName nas.davidthinking.com
 	User admin
 	IdentityFile ~/.ssh/personal/nas.key
+
+Host wf
+	HostName www.wf-grp.com
+	Port 10022
+	User wfgrp001
+
+Host galen
+	Hostname 23.239.30.22
+	User root
