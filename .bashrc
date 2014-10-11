@@ -3,6 +3,15 @@ alias sshneik='ssh neikenberry@pierce.dreamhost.com'
 
 alias dnsflush='dscacheutil -flushcache;sudo killall -HUP mDNSResponder'
 
+
+
+# User specific aliases and functions
+
+alias sassy='sass --watch sass/style.scss:style.css --style compressed'
+alias mine='sudo chown -R dbankes:developers *'
+
+
+
 complete -o default -o nospace -W "$(grep -i -e '^host ' ~/.ssh/config | awk '{print substr($0, index($0,$2))}' ORS=' ')" ssh scp sftp
 
 # Source global definitions
