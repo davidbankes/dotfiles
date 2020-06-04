@@ -4,7 +4,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	autocrlf = false
-	safecrlf = true
+	safecrlf = false
 	whitespace = -blank-at-eol,-space-before-tab,-blank-at-eof,-cr-at-eol
 	excludesfile = ~/.gitignore_global
 [color]

@@ -1,17 +1,78 @@
+Host staging
+    HostName staging.hosting.oohology.com
+    User dbankes
+    IdentityFile ~/.ssh/oohology/staging.key
+
+Host production
+    HostName manage.hosting.oohology.com
+    User dbankes
+    IdentityFile ~/.ssh/oohology/staging.key
+
 Host oohdev
 	HostName dev01.spiiider.com
 	User dbankes
-	IdentityFile ~/.ssh/oohology/dev.key
 
-Host oohstaging
-	HostName 172.16.9.2
-	User dbankes
-	IdentityFile ~/.ssh/oohology/staging.key
+Host syncOohologyStaging
+    HostName staging.hosting.oohology.com
+    User oohology
+    IdentityFile ~/.ssh/oohology/staging.key
 
-Host oohlive
-	HostName 172.16.9.1
-	User dbankes
-	IdentityFile ~/.ssh/oohology/live.key
+Host syncOohologyProduction
+    HostName manage.hosting.oohology.com
+    User oohology.com
+    IdentityFile ~/.ssh/oohology/staging.key
+
+Host productionCmta
+    HostName manage.hosting.oohology.com
+    User cmtaegrs
+    IdentityFile ~/.ssh/oohology/staging.key
+
+Host stagingCmta
+    HostName staging.hosting.oohology.com
+    User cmtaegrs
+    IdentityFile ~/.ssh/oohology/cmta-staging.key
+    IdentitiesOnly yes
+
+Host stagingBardstownConnect
+    HostName staging.hosting.oohology.com
+    User bardstownconnect
+    IdentityFile ~/.ssh/oohology/staging.key
+
+Host productionStokers
+    HostName manage.hosting.oohology.com
+    User stokerssnuff
+    IdentityFile ~/.ssh/oohology/staging.key
+
+Host productionBiteMeals
+    HostName manage.hosting.oohology.com
+    User bitemeals
+    IdentityFile ~/.ssh/oohology/staging.key
+
+Host stagingOneSight
+    HostName staging.hosting.oohology.com
+    User onesight
+    IdentityFile ~/.ssh/oohology/staging.key
+
+Host stagingPresbyterianWomen
+    HostName staging.hosting.oohology.com
+    User presbyterianwomen
+    IdentityFile ~/.ssh/oohology/presbyterianwomenstaging_ed25519
+
+Host derbymuseum
+    HostName 50.116.46.53
+    User doeanderson
+    IdentityFile ~/.ssh/oohology/derbymuseum-rsa.key
+
+Host grasshoppers
+    HostName grasshoppersfood.com
+    User oohgrasshoppers
+    IdentityFile ~/.ssh/oohology/grasshoppers_rsa
+
+Host inline
+    HostName inlineengineers.com
+    User inlinee
+    Port 2222
+    IdentityFile ~/.ssh/oohology/id_rsa_inlinee
 
 Host ebonite
 	Hostname 50.62.45.240
@@ -22,11 +83,108 @@ Host nas
 	User admin
 	IdentityFile ~/.ssh/personal/nas.key
 
-Host wf
+Host wfdev
 	HostName www.wf-grp.com
 	Port 10022
 	User wfgrp001
 
-Host galen
-	Hostname 23.239.30.22
-	User root
+Host watchflippers_staging
+	HostName 54.200.171.120
+	User ec2-user
+    IdentityFile ~/.ssh/watch_flippers/wf_ooh_rsa
+	#IdentityFile ~/.ssh/wf-001001.ppk
+
+Host moore
+	Hostname moore-smiles.com
+	User smooreme
+	IdentityFile ~/.ssh/moore-smiles.com
+
+Host dental
+	Hostname 69.164.201.207
+	User oohology
+
+Host oohump
+	Hostname 45.56.73.45
+	User oohology
+
+Host wflive
+	#HostName 52.10.237.30
+	#HostName 54.148.36.162
+    #HostName 34.213.156.15
+    #HostName 35.161.87.127
+    #HostName 34.214.133.40
+    HostName 52.25.120.117
+	user ec2-user
+    #IdentityFile ~/.ssh/watch_flippers/wf_ooh_rsa
+    IdentityFile ~/.ssh/watch_flippers/wf-001001.pem
+
+Host wflivecron
+	HostName 52.24.49.83
+	user ec2-user
+	#IdentityFile ~/.ssh/watch_flippers/wf-001001.pem
+    IdentityFile ~/.ssh/watch_flippers/wf_ooh_rsa
+	#external IPs to watch for
+	#74.134.52.83/32
+	#74.132.25.193/32
+	#74.133.137.208/32
+
+Host wfstaging
+	HostName staging.watchflippers.com
+	user oohology
+
+Host sabiwhiskey
+	HostName sabiwhiskey.com
+	user oohology
+	IdentityFile ~/.ssh/oohology/sabiwhiskey.pub
+
+Host paulsfruit
+    Hostname 18.219.170.16
+    user bitnami
+    IdentityFile ~/.ssh/oohology/paulsfruit.pem
+
+Host questec
+    Hostname 107.180.58.49
+    user aqdpmx9pfmeg
+    IdentityFile ~/.ssh/oohology/staging.key
+
+Host midlandpacific
+    Hostname vps6554.inmotionhosting.com
+    User midlandpacific
+    IdentityFile ~/.ssh/id_rsa
+
+Host presbyterianwomen
+    Hostname ded3391.inmotionhosting.com
+    User presbyterianwome
+    IdentityFile ~/.ssh/id_rsa
+
+
+
+# Gitlab user account
+Host gitlab.com
+	HostName gitlab.com
+	User git
+	IdentityFile ~/.ssh/id_gitlab
+
+Host onesight.test
+  HostName 127.0.0.1
+  User vagrant
+  Port 2222
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Volumes/Dev/oohology/onesight/trellis/.vagrant/machines/default/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+  ForwardAgent yes
+
+Host onesight.bankes
+  HostName 127.0.0.1
+  User vagrant
+  Port 2222
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Volumes/Dev/oohology/onesight/trellis/.vagrant/machines/default/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+  ForwardAgent yes
